@@ -269,3 +269,9 @@ dialog {
 dialog::backdrop {
     background-color: hsla(0, 0%, 0%, 0.75);
 }
+
+footer {
+    margin-block-start: 6em;
+    padding: 1em;
+    background-color: silver;
+}
