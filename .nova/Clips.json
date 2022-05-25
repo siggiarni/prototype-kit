@@ -1,0 +1,11 @@
+{
+  "clips" : [
+    {
+      "content" : "<a href=\"$0\" class=\"button\">$1<\/a>",
+      "name" : "button",
+      "scope" : "editor",
+      "syntax" : "html",
+      "trigger" : "btn"
+    }
+  ]
+}

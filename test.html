@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0 viewport-fit=cover">
+    <title>Document</title>
+</head>
+<body>
+    
+    <test-element></test-element>
+    
+    <template id="test-template">
+        <style>
+            div {
+                background: red;
+            }
+        </style>
+        <div>
+            <slot name="title">Missing title</slot>
+        </div>
+    </template>
+    
+    <script>
+        // Defines the custom element with our appropriate name 'demo-element'
+        customElements.define(
+            "test-element",
+            // Ensures that we have all the default properties and methods of a built in HTML element
+            class extends HTMLElement {
+                // Called anytime a new custom element is created
+                constructor() {
+                    // Calls the parent constructor, i.e. the constructor for `HTMLElement`,
+                    // so that everything is set up exactly as we would for creating a built in HTML element
+                    super();
+                    // Grabs the <template> and stores it in `demoEl`
+                    let demoEl = document.getElementById("test-template");
+                    // Stores the contents of the template in `myDemo`
+                    let myDemo = demoEl.content;
+    
+                    // 1. Create shadow DOM.
+                    // 2. mode: open means that JavaScript from outside the :root can access
+                    //    and manipulate the elements within the shadow DOM.
+                    // 3. The shadow DOM has been created and we append a node to it.
+                    //    That node will be a deep copy of the template.
+                    const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+                        myDemo.cloneNode(true)
+                    );
+                }
+            }
+        );
+    
+    </script>
+
+</body>
+</html>

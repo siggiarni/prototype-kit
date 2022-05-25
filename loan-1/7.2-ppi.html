@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <a href="/loan-1/1.0-start.html">N</a>
+    </header>
+    <h1>Välkommen som kund till Nordax Bank</h1>
+    <p>Vi går igenom ansökan och gör klart lånet för utbetalning.</p>
+    <p>
+        Lånet utbetalas normalt inom 1-2 dagar. Behöver du skicka mer underlag till oss kan du göra det på
+        <a href="#">kreditt@nordax.no</a>.
+    </p>
+    <p>Om vi behöver något mer kontaktar vi dig.</p>
+    <hr />
+
+    <h2>Lägg till försäkring till ditt lån</h2>
+
+    <p>
+        Nordax erbjuder en frivillig försäkring som kan öka din ekonomiska trygghet under oförutsedda omständigheter.
+    </p>
+
+    <fieldset>
+        <p>
+            <input type="checkbox" name="" id="chk1">
+            <label for="chk1">Refinansieringslån | <span>70 000 kr</span></label>
+        </p>
+        <p>
+            90 kr / månad försäkringskostnad
+        </p>
+    </fieldset>
+
+    <h3>
+        Detta skyddar försäkringen mot
+    </h3>
+
+    <ul>
+        <li>Arbetslöshet</li>
+        <li>Handikapp</li>
+        <li>Död</li>
+    </ul>
+
+    <table>
+        <caption>Kostnad</caption>
+        <tbody>
+            <tr>
+                <th>Refinansieringslån 70 000 kr</th>
+                <td>900 kr/mån</td>
+            </tr>
+            <tr>
+                <th>Försäkring</th>
+                <td>90 kr/mån</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Totalt</th>
+                <td>990 kr/mån</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h3>Teckningsregler för försäkring</h3>
+
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid</li>
+        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+        <li>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+        <li>Lorem ipsum dolor sit amet</li>
+    </ul>
+
+    <h3>Försäkringsdokument</h3>
+
+    <p><a href="#">Villkor för lånesäkerhet</a></p>
+    <p><a href="#">Information om förhandsköp</a></p>
+    <p><a href="#">Produktbeskrivning</a></p>
+
+
+    <hr>
+
+    <div class="controls">
+        <!-- <a class="button" href="1.0-start.html">Fortsette →</a> -->
+        <button onclick="document.querySelector('dialog').showModal()">Fortsette →</button>
+        <a class="button-link" href="8.1-ppi-no.html">Skip PPI</a>
+    </div>
+
+
+    <dialog>
+        <!-- <div> -->
+        <h2>TOS</h2>
+        <p>
+            <input type="checkbox" name="" id="chk2" autofocus>
+            <label for="chk2">Jag försäkrar</label>
+        </p>
+        <ul>
+            <li>Den här texten är inte korrekt och behöver uppdateras. Nordax erbjuder en frivillig försäkring som kan öka din ekonomiska trygghet under oförutsedda omständigheter.</li>
+            <li>Den här texten är inte korrekt och behöver uppdateras.</li>
+        </ul>
+        <hr>
+        <p>
+            <input type="checkbox" name="" id="chk2">
+            <label for="chk2">Jag försäkrar</label>
+        </p>
+        <ul>
+            <li>BNP Paribas Cardif kommer att behandla. Den här texten är inte korrekt och behöver uppdateras. Nordax erbjuder en frivillig försäkring som kan öka din ekonomiska trygghet under oförutsedda omständigheter.</li>
+        </ul>
+        <!-- </div> -->
+        <hr>
+        <div class="controls">
+            <a class="button" href="8.0-ppi-yes.html">Jag accepterar</a>
+            <a class="button-link" href="#" onClick="document.querySelector('dialog').close()">Cancel</a>
+        </div>
+    </dialog>
+
+</body>
+
+</html>

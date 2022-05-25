@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* + * {
+    margin-block-start: 1.5em;
+}
+
+:root {
+    --borderRadius: 0.25em;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    max-width: 48em;
+    margin-block: 0;
+    margin-inline: auto;
+    padding: 1em;
+    font-size: 1.25em;
+}
+
+header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+hr {
+    border: solid grey;
+    border-width: thin 0 0 0;
+}
+
+nav {
+    margin: 0;
+}
+
+nav ul {
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0;
+    margin-inline-start: 1em;
+    list-style: none;
+}
+
+h1 {
+    font-size: 1.55em;
+    border-bottom: thin solid black;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+h2 span {
+    white-space: nowrap;
+}
+
+h3 {
+    font-size: 1.05em;
+}
+
+summary {
+    background-color: whitesmoke;
+}
+
+table {
+    table-layout: fixed;
+    border: thin solid silver;
+    border-collapse: collapse;
+}
+
+table caption {
+    padding-block-end: 0.5em;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th {
+    padding-block: 0.25em;
+    padding-inline: 0.45em;
+    text-align: left;
+    border-bottom: thin solid silver;
+    border-right: thin solid silver;
+    background-color: whitesmoke;
+}
+
+table td {
+    padding-block: 0.25em;
+    padding-inline: 0.45em;
+    border-right: thin solid silver;
+    border-bottom: thin solid silver;
+}
+
+*[disabled] {
+    background-color: snow;
+}
+
+fieldset {
+    max-width: 24em;
+    padding-inline: 1.5em;
+    border-radius: var(--borderRadius);
+}
+
+input,
+select,
+textarea,
+button,
+.button {
+    font-size: inherit;
+}
+
+input {
+    width: 1em;
+    height: 1em;
+    accent-color: black;
+}
+
+/* text input, select and text area */
+label + * {
+    width: 100%;
+    height: 2.5em;
+    margin-block-start: 0.25em;
+    padding-block: 0.5em;
+    padding-inline: 0.25em;
+    display: block;
+    border: thin solid black;
+    border-radius: var(--borderRadius);
+}
+
+label:has(+ *[required]:focus)::after {
+    margin-inline-start: 0.5em;
+    padding-inline: 0.5em;
+    padding-block: 0.25em;
+    font-size: 0.55em;
+    line-height: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: white;
+    background-color: black;
+    border-radius: 1.25em;
+    content: "★";
+}
+
+@media screen and (min-width: 32em) {
+    label + * {
+        max-width: 26.5em;
+    }
+    label:has(+ *[required]:focus)::after {
+        font-size: 0.85em;
+        content: "← Required";
+    }
+}
+
+select {
+    --icon-size: 0.75em;
+    -webkit-appearance: none;
+    color: black;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTEyIDI0IDAgMGgyNHoiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-position: right var(--icon-size) center;
+    background-size: var(--icon-size);
+}
+
+button,
+.button {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.6em;
+    -webkit-appearance: none;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--borderRadius);
+    background-color: black;
+    box-shadow: 0 0.375rem 0 -0.125rem silver;
+}
+
+a.button {
+    display: inline-block;
+    text-align: center;
+}
+
+@media screen and (min-width: 32em) {
+    button,
+    .button {
+        width: auto;
+        margin-inline: unset;
+        padding-inline: 0.65em;
+    }
+}
+
+.button-link {
+    display: inline-block;
+    text-align: center;
+}
+
+@media screen and (min-width: 32em) {
+    .button-link {
+        width: auto;
+        text-align: unset;
+    }
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 32em) {
+    .controls {
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 1em;
+    }
+    .controls * + * {
+        margin-block-start: 0;
+    }
+}
+
+.card {
+    padding-inline-start: 0.75em;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 0.5em;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+.card:focus-visible {
+    text-decoration: none;
+}
+k .card::after {
+    padding-inline: 1em;
+    content: "►";
+    background-color: silver;
+    display: flex;
+    align-items: center;
+}
+
+.card--title {
+    margin-block-start: 0.75em;
+    margin-block-end: 0.15em;
+}
+
+.card--state {
+    margin-block-start: 0.15em;
+    margin-block-end: 0.75em;
+}
+
+dialog {
+    max-width: 32em;
+    margin-block: 1em;
+    margin-inline: auto;
+}
+
+dialog::backdrop {
+    background-color: hsla(0, 0%, 0%, 0.75);
+}
