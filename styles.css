@@ -273,5 +273,9 @@ dialog::backdrop {
 footer {
     margin-block-start: 6em;
     padding: 1em;
-    background-color: silver;
+    background-color: whitesmoke;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
