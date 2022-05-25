@@ -242,7 +242,7 @@ a.button {
 .card:focus-visible {
     text-decoration: none;
 }
-k .card::after {
+.card::after {
     padding-inline: 1em;
     content: "►";
     background-color: silver;
