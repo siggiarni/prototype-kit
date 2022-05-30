@@ -1,4 +1,5 @@
 {
+    "start": "/loan-1/1.0-start/",
     "layout": "base.njk",
     "lang": "no"
 }
