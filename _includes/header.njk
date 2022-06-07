@@ -1,9 +1,10 @@
-<a href="{{ start }}">{{ pageTitle }}</a>
-<a href="#" onclick="history.back()">← Tillbaka</a>
 <nav>
+    <div>
+        <a href="{{ start }}">{{ sitename }}</a>
+        <a class="nowrap" href="#" onclick="history.back()">← {{ lang.back.se }}</a>
+    </div>
     <ul>
-        <li><a href="#1">Nav 1</a></li>
-        <li><a href="#2">Nav 2</a></li>
-        <li><a href="#3">Nav 3</a></li>
+        <li><a href="#1">{{ lang.messages.se }}</a></li>
+        <li><a href="#2"> <abbr title="Nicholas Dahlquist">ND</abbr></a></li>
     </ul>
 </nav>

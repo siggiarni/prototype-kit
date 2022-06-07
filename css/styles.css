@@ -20,14 +20,15 @@ body {
     max-width: 48em;
     margin-block: 0;
     margin-inline: auto;
-    padding: 1em;
+    padding: 0.5em;
     font-size: 1.25em;
 }
 
 header {
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
+    margin: 0;
+    padding: 0.5em;
+    /* display: flex;
+    justify-content: space-between; */
     background-color: whitesmoke;
 }
 
@@ -38,10 +39,19 @@ hr {
 
 nav {
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: whitesmoke; */
+}
+
+nav a {
+    margin: 0;
+    display: block;
 }
 
 nav ul {
     margin: 0;
+    padding: 0;
     display: flex;
 }
 
@@ -52,12 +62,12 @@ nav li {
 }
 
 h1 {
-    font-size: 1.55em;
+    font-size: 1.25em;
     border-bottom: thin solid black;
 }
 
 h2 {
-    font-size: 1.25em;
+    font-size: 1.05em;
 }
 
 h2 span {
@@ -278,4 +288,7 @@ footer {
 
 .nowrap {
     white-space: nowrap;
+}
+
+.back {
 }

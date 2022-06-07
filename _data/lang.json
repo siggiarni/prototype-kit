@@ -1,0 +1,12 @@
+{
+    "messages": {
+        "se": "Meddelanden",
+        "no": "Meldinger",
+        "fi": "Viestit"
+    },
+    "back": {
+        "se": "Tillbaka",
+        "no": "tilbake",
+        "fi": "takaisin"
+    }
+}
