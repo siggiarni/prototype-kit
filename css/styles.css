@@ -10,6 +10,8 @@
 
 :root {
     --borderRadius: 0.25em;
+    --pageSpace: 1em;
+    --contentSpace: 1em;
 }
 
 html {
@@ -20,15 +22,14 @@ body {
     max-width: 48em;
     margin-block: 0;
     margin-inline: auto;
-    padding: 0.5em;
+    padding: 0;
     font-size: 1.25em;
 }
 
 header {
     margin: 0;
-    padding: 0.5em;
-    /* display: flex;
-    justify-content: space-between; */
+    padding-block: 0.5em;
+    padding-inline: var(--pageSpace);
     background-color: whitesmoke;
 }
 
@@ -38,27 +39,30 @@ hr {
 }
 
 nav {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    /* background-color: whitesmoke; */
 }
 
 nav a {
-    margin: 0;
-    display: block;
 }
 
 nav ul {
-    margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav li {
-    margin: 0;
-    margin-inline-start: 1em;
+nav ul li {
+    --gap: 1em;
+    margin-block: 0;
+    margin-inline-start: var(--gap);
     list-style: none;
+}
+
+nav ul li:first-child {
+    --gap: 0;
+    flex: 1 0 auto;
+}
+
+main {
+    padding: var(--contentSpace);
 }
 
 h1 {
@@ -282,7 +286,9 @@ dialog::backdrop {
 
 footer {
     margin-block-start: 6em;
-    padding: 1em;
+    margin-block-end: var(--pageSpace);
+    margin-inline: var(--pageSpace);
+    padding: var(--contentSpace);
     background-color: whitesmoke;
 }
 
