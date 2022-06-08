@@ -295,7 +295,7 @@ a.button {
 
 dialog {
     max-width: 32em;
-    margin-block: 1em;
+    margin: 1em;
     margin-inline: auto;
 }
 
