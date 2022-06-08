@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+/* * > * {
+    outline: 2px solid red;
+} */
+
 * + * {
-    margin-block-start: 1.5em;
+    /* margin-block-start: 1.5rem; */
+    margin-block-start: var(--space, 1.5rem);
 }
 
 :root {
@@ -24,24 +29,34 @@ body {
     margin-inline: auto;
     padding: 0;
     font-size: 1.25em;
+
+    display: grid;
+    grid-template-rows: auto minmax(55vh, auto) auto;
 }
 
 header {
-    margin: 0;
+    --space: 0;
     padding-block: 0.5em;
     padding-inline: var(--pageSpace);
+    background-color: whitesmoke;
+}
+
+main {
+    --space: 2rem;
+    padding-inline: var(--contentSpace);
+}
+
+footer {
+    margin-block-start: 6em;
+    margin-block-end: var(--pageSpace);
+    margin-inline: var(--pageSpace);
+    padding: var(--contentSpace);
     background-color: whitesmoke;
 }
 
 hr {
     border: solid grey;
     border-width: thin 0 0 0;
-}
-
-nav {
-}
-
-nav a {
 }
 
 nav ul {
@@ -61,16 +76,13 @@ nav ul li:first-child {
     flex: 1 0 auto;
 }
 
-main {
-    padding: var(--contentSpace);
-}
-
 h1 {
     font-size: 1.25em;
-    border-bottom: thin solid black;
 }
 
 h2 {
+    /* margin-block-start: 0; */
+    /* --space: 0; */
     font-size: 1.05em;
 }
 
@@ -87,6 +99,7 @@ summary {
 }
 
 table {
+    width: 100%;
     table-layout: fixed;
     border: thin solid silver;
     border-collapse: collapse;
@@ -112,6 +125,12 @@ table td {
     padding-inline: 0.45em;
     border-right: thin solid silver;
     border-bottom: thin solid silver;
+}
+
+@media screen and (min-width: 32em) {
+    table {
+        width: auto;
+    }
 }
 
 *[disabled] {
@@ -224,6 +243,11 @@ a.button {
     }
 }
 
+.content {
+    outline: 1px solid red;
+    height: 100%;
+}
+
 .controls {
     display: flex;
     flex-direction: column;
@@ -244,6 +268,7 @@ a.button {
 
 .card {
     padding-inline-start: 0.75em;
+    /* padding-inline-end: 1em; */
     display: flex;
     justify-content: space-between;
     overflow: hidden;
@@ -257,6 +282,7 @@ a.button {
     text-decoration: none;
 }
 .card::after {
+    margin-inline-start: 0.25em;
     padding-inline: 1em;
     content: "►";
     background-color: silver;
@@ -284,17 +310,24 @@ dialog::backdrop {
     background-color: hsla(0, 0%, 0%, 0.75);
 }
 
-footer {
-    margin-block-start: 6em;
-    margin-block-end: var(--pageSpace);
-    margin-inline: var(--pageSpace);
-    padding: var(--contentSpace);
-    background-color: whitesmoke;
+dd {
+    margin-inline: 0;
 }
 
 .nowrap {
     white-space: nowrap;
 }
 
-.back {
+.items {
+    --space: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.center {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
 }
